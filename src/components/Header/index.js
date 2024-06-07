@@ -33,7 +33,7 @@ const Header = props => (
         toggleTheme()
       }
       const onClickLogout = () => {
-        const {hystory} = props
+        const {history} = props
         Cookies.remove('jwt_token')
         history.replace('/login')
       }

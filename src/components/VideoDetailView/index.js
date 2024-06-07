@@ -8,7 +8,7 @@ import ThemeAndVideoContext from '../../context/ThemeAndVideoContext'
 import FailureView from '../FailureView'
 import PlayVideoView from '../PlayVideoView'
 
-import {videoDetailViewContainer, LoaderContainer} from './styledComponents'
+import {VideoDetailViewContainer, LoaderContainer} from './styledComponents'
 
 const apiStatusConstants = {
   initial: 'INITIAL',
@@ -46,7 +46,7 @@ class VideoDetailView extends Component {
     const {id} = params
     const jwtToken = Cookies.get('jwt_token')
 
-    const url = `https://apis.ccbp.in/videos/${is}`
+    const url = `https://apis.ccbp.in/videos/${id}`
     const options = {
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -66,14 +66,14 @@ class VideoDetailView extends Component {
     }
   }
   clickLiked = () => {
-    this.setState(preveState => ({
-      isLiked: !preveState.isLiked,
+    this.setState(prevState => ({
+      isLiked: !prevState.isLiked,
       isDisLiked: false,
     }))
   }
   clickDisLiked = () => {
-    this.setState(preveState => ({
-      isDisLiked: !preveState.isDisLiked,
+    this.setState(prevState => ({
+      isDisLiked: !prevState.isDisLiked,
       isLiked: false,
     }))
   }
@@ -123,12 +123,12 @@ class VideoDetailView extends Component {
             <>
               <Header />
               <NavigationBar />
-              <videoDetailViewContainer
+              <VideoDetailViewContainer
                 data-testid="videoItemDetails"
                 bgColor={bgColor}
               >
                 {this.renderVideoDetailView()}
-              </videoDetailViewContainer>
+              </VideoDetailViewContainer>
             </>
           )
         }}

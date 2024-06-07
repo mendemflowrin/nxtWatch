@@ -3,7 +3,7 @@ import ThemeAndVideoContext from '../../context/ThemeAndVideoContext'
 import {
   ItemLink,
   TrendingListItem,
-  TrendingThumbnailImage,
+  TrendingThumbNailImage,
   TrendingVideoDetails,
   TrendingProfileImage,
   TrendingContentSection,
@@ -32,7 +32,7 @@ const VideoCard = props => {
         return (
           <ItemLink to={`/videos/${id}`} className="link">
             <TrendingListItem>
-              <TrendingThumbnailImage
+              <TrendingThumbNailImage
                 src={thumbnailUrl}
                 alt="video thumbnail"
               />

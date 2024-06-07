@@ -37,7 +37,7 @@ class GamingVideos extends Component {
   getVideos = async () => {
     this.setState({apiStatus: apiStatusConstants.inProgress})
     const jwtToken = Cookies.get('jwt_token')
-    const url = 'https://apis.ccbp.in/videos/gaming'
+    const url = `https://apis.ccbp.in/videos/gaming`
     const options = {
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -50,7 +50,7 @@ class GamingVideos extends Component {
       const updatedData = data.videos.map(eachVideo => ({
         id: eachVideo.id,
         title: eachVideo.title,
-        thumbnailUrl: eachVideo.thumbnailUrl,
+        thumbnailUrl: eachVideo.thumbnail_Url,
         viewCount: eachVideo.view_count,
       }))
       this.setState({

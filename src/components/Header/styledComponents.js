@@ -14,7 +14,7 @@ export const NavbarHeader = styled.nav`
     @media screen and (min-width: 768px) {
     padding-left: 30px;
     padding-right: 30px;
-}
+    }
 `
 export const HeaderLogo = styled.img`
     width: 80px;
@@ -22,7 +22,7 @@ export const HeaderLogo = styled.img`
     @media screen and (min-width: 768px){
     width: 100px;
     height: 40px;
-}
+    }
 `
 export const ActionsContainer = styled.div`
     display: flex;
@@ -73,7 +73,7 @@ export const ModalContainer = styled.div`
     background-color: #cbd5e1;
     border-radius: 10px;
     padding: 20px;
-    @media screen and (max-width: 768px) {
+    @media screen and (min-width: 768px) {
     height: 200px;
     width: 400px;
     }
@@ -127,7 +127,7 @@ export const ModalDesc = styled.p`
     margin: 10px;
     color: black;
     text-align: center;
-    @media screen and (max-width: 768px) {
+    @media screen and (min-width: 768px) {
     font-size: 20px;
     }
 `

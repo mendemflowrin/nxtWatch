@@ -1,7 +1,7 @@
 import {Link} from 'react-router-dom'
 import styled from 'styled-components'
 
-export const GamingListItem = styled(Link)`
+export const ItemLink = styled(Link)`
     text-decoration:none;
 `
 
@@ -15,7 +15,7 @@ export const GamingListItem = styled.li`
         margin-right: 20px;
     }
 `
-export const GamingThumbnailImage = styled.img`
+export const GamingThumbNailImage = styled.img`
     width: 100vh;
     height: 300px;
     align-self: center;

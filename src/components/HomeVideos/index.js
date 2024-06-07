@@ -22,7 +22,7 @@ const HomeVideos = props => {
         const {isDarkTheme} = value
         const headingColor = isDarkTheme ? '#f1f5f9' : '#475569'
         const noteColor = isDarkTheme ? '#e2e8f0' : '#475569'
-        return videoCount > 0 ? (
+        return videosCount > 0 ? (
           <VideoCardList>
             {homeVideos.map(eachVideo => (
               <HomeVideoCard video={eachVideo} key={eachVideo.id} />

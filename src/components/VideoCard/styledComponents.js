@@ -1,6 +1,9 @@
 import {Link} from 'react-router-dom'
 import styled from 'styled-components'
 
+export const ItemLink = styled(Link)`
+    text-decoration:none;
+`
 export const TrendingListItem = styled.li`
     background: none;
     width: 100%;
@@ -12,7 +15,7 @@ export const TrendingListItem = styled.li`
     padding-left: 40px;
     }
 `
-export const TrendingThumbnailImage = styled.img`
+export const TrendingThumbNailImage = styled.img`
     width: 100%;
     @media screen and (min-width: 768px) {
     width: 300px;

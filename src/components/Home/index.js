@@ -35,7 +35,7 @@ const apiStatusConstants = {
 class Home extends Component {
   state = {
     homeVideos: [],
-    SearchInput: '',
+    searchInput: '',
     apiStatus: apiStatusConstants.initial,
     bannerDisplay: 'flex',
   }
@@ -43,7 +43,7 @@ class Home extends Component {
     this.getVideos()
   }
   getVideos = async () => {
-    const {SearchInput} = this.state
+    const {searchInput} = this.state
     this.setState({apiStatus: apiStatusConstants.inProgress})
     const jwtToken = Cookies.get('jwt_token')
     const url = `https://apis.ccbp.in/videos/all?search=${searchInput}`
@@ -130,7 +130,7 @@ class Home extends Component {
                       alt="nxt watch logo"
                     />
                     <BannerText>
-                      Buy nxt watch premium prepaid with <br /> UPI
+                      Buy Nxt Watch Premium prepaid plans with <br /> UPI
                     </BannerText>
                     <BannerButton type="button">GET IT NOW</BannerButton>
                   </BannerLeftPart>
@@ -144,7 +144,7 @@ class Home extends Component {
                   </BannerRightPart>
                 </BannerContainer>
                 <SearchContainer>
-                  <searchInput
+                  <SearchInput
                     type="search"
                     placeholder="Search"
                     value={searchInput}

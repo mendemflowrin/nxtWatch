@@ -25,7 +25,7 @@ import {
 } from './styledComponents'
 
 const PlayVideoView = props => {
-  const {videoDetails, isLiked, isDisliked, clickLiked, clickDisLiked} = props
+  const {videoDetails, isLiked, isDisLiked, clickLiked, clickDisLiked} = props
   const onClickLike = () => {
     clickLiked()
   }
@@ -76,11 +76,11 @@ const PlayVideoView = props => {
                 <BtnContainer>
                   <SocialButton
                     type="button"
-                    color={isDisliked ? '#2563eb' : '#64748b'}
+                    color={isDisLiked ? '#2563eb' : '#64748b'}
                     onClick={onClickDislike}
                   >
-                    <AiOutlineLike size={25} />
-                    <ButtonText>DisLike</ButtonText>
+                    <AiOutlineDislike size={25} />
+                    <ButtonText>Dislike</ButtonText>
                   </SocialButton>
                 </BtnContainer>
                 <BtnContainer>
@@ -89,7 +89,7 @@ const PlayVideoView = props => {
                     color={saveIconColor}
                     onClick={onClickSave}
                   >
-                    <AiOutlineLike size={25} />
+                    <BiListPlus size={25} />
                     <ButtonText>{isSaved ? 'Saved' : 'Save'}</ButtonText>
                   </SocialButton>
                 </BtnContainer>

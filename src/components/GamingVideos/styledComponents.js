@@ -9,7 +9,7 @@ export const GamingContainer = styled.div`
     @media screen and (min-width:768px){
     margin-left: 250px;
     margin-bottom: 0px;
-}
+    }
 `
 export const GamingVideoTitle = styled.div`
     display: flex;

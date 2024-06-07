@@ -6,6 +6,8 @@ import {
   AppContainer,
   FormContainer,
   LoginLogo,
+  InputContainer,
+  LoginButton,
   SubmitError,
   InputLabel,
   UserInput,
@@ -18,7 +20,7 @@ class LoginForm extends Component {
   state = {
     username: '',
     password: '',
-    ShowPassword: false,
+    showPassword: false,
     showSubmitError: false,
     errorMsg: '',
   }
@@ -26,10 +28,10 @@ class LoginForm extends Component {
     this.setState({[event.target.name]: event.target.value})
   }
   onShowPassword = () => {
-    this.setState(preveState => ({showPassword: ~preveState.showPassword}))
+    this.setState(preveState => ({showPassword: !preveState.showPassword}))
   }
   onSubmitSuccess = jwtToken => {
-    const {hystory} = this.props
+    const {history} = this.props
     Cookies.set('jwt_token', jwtToken, {
       expires: 30,
       path: '/',

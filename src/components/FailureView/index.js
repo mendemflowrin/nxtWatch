@@ -26,10 +26,10 @@ const FailureView = props => {
           <FailedView>
             <FailedImage src={failureImageUrl} alt="failure view" />
             <FailedHeading headingColor={headingColor}>
-              Oops!Something Went Wrong
+              Oops! Something Went Wrong
             </FailedHeading>
             <FailedNote noteColor={noteColor}>
-              We are having some trouble to complete your request. <br /> please
+              We are having some trouble to complete your request. <br /> Please
               try again later.
             </FailedNote>
             <RetryButton type="button" onClick={onClickRetry}>

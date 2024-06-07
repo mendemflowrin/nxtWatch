@@ -13,7 +13,7 @@ export const NavigationLgContainer = styled.div`
     position: fixed;
     top: 60px;
     background-color: ${props => props.bgColor};
-    @media screen and (min-width: 768px) {
+    @media screen and (max-width: 768px) {
     display: none;
     }
 `
